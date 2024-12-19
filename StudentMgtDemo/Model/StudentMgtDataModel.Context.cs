@@ -27,5 +27,6 @@ namespace StudentMgtDemo.Model
     
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<Teacher> Teachers { get; set; }
     }
 }

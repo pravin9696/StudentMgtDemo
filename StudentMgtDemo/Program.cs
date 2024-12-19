@@ -1,6 +1,7 @@
 ﻿using StudentMgtDemo.admin_Task;
 using StudentMgtDemo.Login;
 using System;
+using System.Reflection.Emit;
 
 namespace StudentMgtDemo
 {
@@ -24,6 +25,7 @@ namespace StudentMgtDemo
                 Console.WriteLine("6:Exit");
                 Console.WriteLine("Enter choice");
                 ch = int.Parse(Console.ReadLine());
+                loginClass lg = new loginClass();
                 switch (ch)
                 {
                     case 1:
@@ -33,7 +35,7 @@ namespace StudentMgtDemo
                         }
                         else
                         {
-                            loginClass lg = new loginClass();
+                           
                             bool result = lg.IsLogin();
                             if (result)
                             {
@@ -43,6 +45,10 @@ namespace StudentMgtDemo
                                 acObj.AdminTask();
                             }
                         }
+                        break;
+                    case 2:
+
+                        bool r = lg.SignUp();
                         break;
                     case 5:
                         if (isLogedIn == true)

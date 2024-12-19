@@ -14,9 +14,18 @@ namespace StudentMgtDemo.Model
     
     public partial class Cours
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Cours()
+        {
+            this.Teachers = new HashSet<Teacher>();
+        }
+    
         public int courseID { get; set; }
         public string CourseName { get; set; }
         public string Duration { get; set; }
         public Nullable<int> Fees { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Teacher> Teachers { get; set; }
     }
 }

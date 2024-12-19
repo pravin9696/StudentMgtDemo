@@ -7,6 +7,8 @@
       <Diagram DiagramId="c3758f8d6bf94987a84f25f60ee09c6b" Name="Diagram1">
         <EntityTypeShape EntityType="StudentMGTModel.Login" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StudentMGTModel.Cours" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="StudentMGTModel.Teacher" Width="1.5" PointX="5.625" PointY="0.75" />
+        <AssociationConnector Association="StudentMGTModel.FK_Teacher_Courses" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
