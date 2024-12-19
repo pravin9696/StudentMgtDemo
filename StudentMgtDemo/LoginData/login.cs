@@ -1,9 +1,6 @@
 ﻿using StudentMgtDemo.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentMgtDemo.Login
 {
@@ -19,14 +16,14 @@ namespace StudentMgtDemo.Login
             Console.WriteLine("Enter User Name and password for Signup");
             un = Console.ReadLine();
             Pass = Console.ReadLine();
-           
-             Model.Login lg=new Model.Login();
+
+            Model.Login lg = new Model.Login();
             lg.UserName = un;
             lg.Password = Pass;
 
 
             dbo.Logins.Add(lg);
-            int n=dbo.SaveChanges();
+            int n = dbo.SaveChanges();
             if (n > 0)
             {
                 Console.WriteLine("Sign up successfully..");
@@ -48,10 +45,10 @@ namespace StudentMgtDemo.Login
             string pass;
             Console.WriteLine("enter User Name and Password");
             uname = Console.ReadLine();
-            pass= Console.ReadLine();
+            pass = Console.ReadLine();
 
             var lg = dbo.Logins.FirstOrDefault(x => x.UserName == uname && x.Password == pass);
-            if (lg!=null)//lg contain object of Login class
+            if (lg != null)//lg contain object of Login class
             {
                 Console.WriteLine("login successful...");
                 return true;
@@ -60,8 +57,8 @@ namespace StudentMgtDemo.Login
             {
                 Console.WriteLine("invalid username or password");
                 return false;
-            }           
+            }
         }
-        
+
     }
 }

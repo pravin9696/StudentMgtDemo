@@ -1,7 +1,6 @@
 ﻿using StudentMgtDemo.admin_Task;
 using StudentMgtDemo.Login;
 using System;
-using System.Reflection.Emit;
 
 namespace StudentMgtDemo
 {
@@ -35,7 +34,7 @@ namespace StudentMgtDemo
                         }
                         else
                         {
-                           
+
                             bool result = lg.IsLogin();
                             if (result)
                             {
@@ -57,7 +56,7 @@ namespace StudentMgtDemo
                         }
                         else
                         {
-                            Console.WriteLine("not logged in yet!!!");   
+                            Console.WriteLine("not logged in yet!!!");
                         }
                         break;
 
