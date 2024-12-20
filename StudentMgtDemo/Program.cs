@@ -21,6 +21,7 @@ namespace StudentMgtDemo
                 {
                     Console.WriteLine("5:Sign out");
                 }
+                Console.WriteLine("3:update uname & password");
                 Console.WriteLine("6:Exit");
                 Console.WriteLine("Enter choice");
                 ch = int.Parse(Console.ReadLine());
@@ -38,10 +39,15 @@ namespace StudentMgtDemo
                             bool result = lg.IsLogin();
                             if (result)
                             {
+                                Console.WriteLine("login successful..");
                                 isLogedIn = true;
                                 Console.WriteLine("welcome...");
                                 AdminClass acObj = new AdminClass();
                                 acObj.AdminTask();
+                            }
+                            else
+                            {
+                                Console.WriteLine("invalid username or password!!!");
                             }
                         }
                         break;
@@ -60,6 +66,8 @@ namespace StudentMgtDemo
                         }
                         break;
 
+                    case 3:  lg.updateLoginDetails();
+                                break;
                     case 6:
                         Environment.Exit(0);
                         break;
