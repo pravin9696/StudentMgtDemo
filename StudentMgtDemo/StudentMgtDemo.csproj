@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="addFromGithub.txt" />
+    <Content Include="Add_in New realease.txt" />
     <Content Include="Data base script\student mgt DB script.sql" />
     <Content Include="Model\StudentMgtDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
